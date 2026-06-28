@@ -38,5 +38,5 @@ Execution Unit: Internal Bus Controls
 Functional Description: Reserved for multi-byte sequential memory access hardware.
 
 ## 3. Hardware Behavioral Rules
-1. Branch Target Source: When an **`MPU`** branch execution signal is validated, the address is read from **`R4`** and copy-translated into **`R6`** (**`PC`**).
-3. **`ALU`** Isolation Rule: During the multi-cycle execution of multi-byte memory operations, **`ALU`** is kept inactive. This hardware isolation prevents any corruption.
+1. **Branch Target Source** : When an **`MPU`** branch execution signal is validated, the address is read from **`R4`** and copy-translated into **`R6`** (**`PC`**).
+2. **`ALU` Isolation Rule ** : During the multi-cycle execution of multi-byte memory operations, **`ALU`** is kept inactive. This hardware isolation prevents any corruption.

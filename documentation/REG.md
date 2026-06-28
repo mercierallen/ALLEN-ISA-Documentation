@@ -14,9 +14,9 @@ Except for **`R0`**, all registers remain permanently interconnected via a share
 | `100` | **`R4`** / **`IS`** | Immediate Storage | Default landing register for all **`IMM`** type instructions. |
 | `101` | **`R5`** / **`MA`** | Memory Address | Primarily holds the 8-bit memory address for all data transfer operations with the **`RAM`** space. |
 | `110` | **`R6`** / **`PC`** | Program Counter | Holds the memory address of the next instruction to be fetched. Increments automatically after each cycle unless overwritten. |
-| `111` | **`R7`** / **`SP`** | Stack Pointer | Primarily interfaced with the stack sub-system. |
+| `111` | **`R7`** / **`SP`** | Stack Pointer | Primarily interfaced with the stack sub-system. Default initialized to `0xFF`. |
 
 ## Hardware Behavioral Rules
-1. Branch Testing: Register 3 (**`R3`**) is the primary reference for mono conditional branch testing. The mono condition is always evaluated against the value `0` (e.g., EQU verifies if **`R3`** == `0`).
-2. Branching Constraint: When a branch instruction executes, the new target address is always read from **`R4`** and copied directly into **`R6`** (PC).
-3. Data Width: All registers are 8 bits wide, except for **`R0`** which remains frozen at `0`.
+1. **Branch Testing** : Register 3 (**`R3`**) is the primary reference for mono conditional branch testing. The mono condition is always evaluated against the value `0` (e.g., EQU verifies if **`R3`** == `0`).
+2. **Branching Constraint** : When a branch instruction executes, the new target address is always read from **`R4`** and copied directly into **`R6`** (PC).
+3. **Data Width** : All registers are 8 bits wide, except for **`R0`** which remains frozen at `0`.

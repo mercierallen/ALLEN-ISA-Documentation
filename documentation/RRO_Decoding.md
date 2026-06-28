@@ -27,6 +27,11 @@ Routing Gate: **`S`** == `0` (Evaluated only if Zone 1 is false)
 Execution Unit: Constant Zero Routing Logic
 Functional Description: Forces a constant value of `0` into the targeted destination register **`D`**.
 
+> [!WARNING]
+> **Register 7 Behavior:** Forcing a Synchronous Clear with a destination of `111` (Stack Pointer) will overwrite its current address.
+> Clearing **`SP`** to `0` disrupts the descending stack model (which starts at `0xFF`) and may cause immediate memory collisions or application failure if stack execution is in progress.
+> To recover or safely initialize, use the **`DSP`** (**`MPU`**) opcode to manually set **`SP`** to `0xFF`.
+
 ### Zone 3: Unary and Control Operations
 Routing Gate: **`S`** == **`D`** (Evaluated only if Zones 1 and 2 are false)
 Execution Unit: Internal Unary Intercept Decoder

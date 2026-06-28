@@ -28,7 +28,7 @@ class RRO_Tree type;
 
 RRO_Tree-->|1.D==0|RRO_Z1[Zone 1: Core ALU <br> Save in R3]
 RRO_Tree-->|2.S==0|RRO_Z2[Zone 2: Sync Clear <br> 0 -> DST]
-RRO_Tree-->|3.S==D|RRO_Z3[Zone 3: Unary & Control <br> NG1-NG4, IMA, BRK, ISP]
+RRO_Tree-->|3.S==D|RRO_Z3[Zone 3: Unary & Control <br> NG1-NG4, IMA, BRK, DSP]
 RRO_Tree-->|4.Fallthrough|RRO_Z4[Zone 4: Universal MOV <br> SRC -> DST]
 
 class RRO_Z1,RRO_Z2,RRO_Z3,RRO_Z4 unit;

@@ -21,13 +21,13 @@ This document catalogs the complete functional specifications and mnemonics for 
 ## Zone 3: Unary and Control Operations
 | Index | Mnemonic | Hardware Operation | Functional Description |
 | :--- | :--- | :--- | :--- |
-| `001` | NG1 | -**`R1`** -> **`R1`** | Two's complement arithmetic negation of Input A (**`R1`**) |
-| `010` | NG2 | -**`R2`** -> **`R2`** | Two's complement arithmetic negation of Input B (**`R2`**) |
-| `011` | NG3 | -**`R3`** -> **`R3`** | Two's complement arithmetic negation of **`ALU`** result (**`R3`**) |
-| `100` | NG4 | -**`R4`** -> **`R4`** | Two's complement arithmetic negation of constants (**`R4`**) |
-| `101` | IMA | **`R5`** + `1` -> **`R5`** | Increment by `1` the **`RAM`** address register (**`R5`**)|
-| `110` | BRK | Halt **`R6`** | Signals software breakpoint and halts the program counter (**`R6`**) |
-| `111` | ISP | **`R7`** + `1` -> **`R7`** | Increment by `1` the stack pointer register (**`R7`**)|
+| `001` | **`NG1`** | -**`R1`** -> **`R1`** | Two's complement arithmetic negation of Input A (**`R1`**) |
+| `010` | **`NG2`** | -**`R2`** -> **`R2`** | Two's complement arithmetic negation of Input B (**`R2`**) |
+| `011` | **`NG3`** | -**`R3`** -> **`R3`** | Two's complement arithmetic negation of **`ALU`** result (**`R3`**) |
+| `100` | **`NG4`** | -**`R4`** -> **`R4`** | Two's complement arithmetic negation of constants (**`R4`**) |
+| `101` | **`IMA`** | **`R5`** + `1` -> **`R5`** | Increment by `1` the **`RAM`** address register (**`R5`**)|
+| `110` | **`BRK`** | Halt **`R6`** | Signals software breakpoint and halts the program counter (**`R6`**) |
+| `111` | **`DSP`** | **`R7`** - `1` -> **`R7`** | Decrement by `1` the stack pointer register (**`R7`**)|
 
 ## Zone 4: Universal Copy Operation (MOV)
 | Mnemonic | Data Path | Functional Description |
